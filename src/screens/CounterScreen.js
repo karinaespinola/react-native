@@ -6,9 +6,9 @@ const COUNT_INCREMENT = 1;
 const reducer = (state, action) => {
     switch(action.type) {
         case 'increase':
-            return { ...state, counter: state.counter + COUNT_INCREMENT };
+            return { ...state, counter: state.counter + action.payload };
         case 'decrease':
-            return { ...state, counter: state.counter - COUNT_INCREMENT };
+            return { ...state, counter: state.counter - action.payload };
     }
 };
 
